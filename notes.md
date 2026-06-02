@@ -35,48 +35,54 @@ Although temperature serves as the primary forecasting target, the remaining wea
 * For further simplification, i.e. to have no dependence of location, I chose the target variable for frecasting to be **Daily Global Average Temperature**.
 
 # Project Flow
-1. Data Cleaning, Preprocessing & Validation
-   ├── Missing Values
-   ├── Outliers - Univariate analysis
-   ├── Missing Values
-   ├── Missing Values
-   ├── Missing Values
-   └── weather_validated.csv
 
-2. EDA Domain Exploration
-   ├── Weather Phenomena Analysis
-   ├── Geographic Analysis
-   ├── Temporal Analysis
-   ├── Climate Zone Analysis
-   ├── Seasonal Patterns
-   └── Air Quality Analysis
-   
-3. Advanced EDA
-   ├── Correlation Analysis
-   ├── Anomaly Detection - Multivariate analysis
-   │   ├── Isolation Forest
-   │   ├── PCA Visualization
-   │   └── SHAP Interpretation
-   └── weather_cleaned.csv
+### 1. Data Cleaning, Preprocessing & Validation
+- Missing values
+- Outliers — univariate analysis
+- Data validation
+- Output: `weather_validated.csv`
 
-4. Feature Engineering
-   ├── Derived Features
-   ├── Climate Zone Feature
-   ├── Cyclical Time Features
-   ├── Encoding
-   ├── Scaling / Normalization
-   ├── Feature Selection
-   └── weather_features.csv
+### 2. EDA Domain Exploration
+- Weather phenomena analysis
+- Geographic analysis
+- Temporal analysis
+- Climate zone analysis
+- Seasonal patterns
+- Air quality analysis
 
-5. Modeling
-   ├── Forecasting
-   │    ├── Time Series Analysis
-   │    │    ├── MA - 7
-   │    │    ├── MA - 3
-   │    │    ├── ARIMA
-   │    │    ├── Prophet
-   │    ├── Machine Learning
-   │    │    ├── Linear Regression
-   │    └── Performance Comparison
-   └── Evaluation
-   
+### 3. Advanced EDA
+- Correlation analysis
+- Anomaly detection — multivariate analysis
+  - Isolation Forest
+  - PCA visualization
+  - SHAP interpretation
+- Output: `weather_cleaned.csv`
+
+### 4. Feature Engineering
+- Derived features
+- Climate zone feature
+- Cyclical time features
+- Encoding
+- Scaling / normalization
+- Feature selection
+- Output: `weather_features.csv`
+
+### 5. Modeling
+- Forecasting Daily Global Avg Temp
+    - Time and Temperature Modelling
+        - Time series analysis
+            - Moving Average — 7 days
+            - Moving Average — 3 days
+            - ARIMA
+            - Prophet
+        - Comparison
+        - Machine Learning
+            - Linear Regression
+                - All lag features
+                - No lag features
+                - 30 day lag
+                - 7 day lag
+                - 1 day lag
+    - Weather, Time and Temperature Modelling
+- Overall comparison
+- Evaluation
